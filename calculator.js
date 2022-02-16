@@ -14,8 +14,6 @@ function checkInKeys (key) {
     return false;
 }
 
-
-
 $("button").on("click",function(){
     console.log(this.getAttribute("id"));
     var key = this.getAttribute("id");
@@ -29,7 +27,7 @@ $("button").on("click",function(){
 
 $("#inputBar").change(function (event) {
     console.log(event);
-    if (event.key == "="){
+    if (event.key == "="||event.key == "Enter"){
         calculate();
     }
 });
@@ -38,7 +36,7 @@ $(document).on("keydown",function(event){
     if (checkInKeys(event.key)){
         var textInBox = $("#inputBar").attr("value");
         $("#inputBar").attr("value",textInBox+event.key);
-    } else if (event.key == "=") {
+    } else if (event.key == "="|| event.key == "Enter") {
         calculate();
     }else if (event.key == "Backspace") {
         var textInBox = $("#inputBar").attr("value");

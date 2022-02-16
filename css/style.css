@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    transition: all ease-in-out 0.2s;
 }
 body{
     background-image: url(../images/backgroundImage.jpg);
@@ -22,6 +23,11 @@ button{
     border-radius: 5px;
     padding: 0.3em;
     font-size: 2rem;
+}
+
+button:hover {
+    background-color: rgb(209, 199, 199);
+    cursor: pointer;
 }
 
 #inputBar{
@@ -97,5 +103,4 @@ button{
                    "decimal zero equals equals equals";
     gap: 1.1em;
     background-color: lightgrey;
-
 }
